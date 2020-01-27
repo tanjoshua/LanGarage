@@ -29,7 +29,7 @@ async function translateText(text, source, target) {
     var xhr = new XMLHttpRequest();
     xhr.open('POST', endpoint, true);
     xhr.setRequestHeader('Content-type', 'application/json');
-    xhr.setRequestHeader("Authorization", 'Bearer <INSERT AUTHORIZATION TOKEN HERE');
+    xhr.setRequestHeader("Authorization", 'Bearer <INSERT AUTHORIZATION TOKEN HERE>');
     xhr.onreadystatechange = function () {
       if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
         const response = JSON.parse(xhr.responseText);
