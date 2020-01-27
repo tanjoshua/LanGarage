@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+  <title>LanGarage</title>
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="selection">
+    <div id = "instructions">
+      Welcome to LanGarage, a Hack@Brown project made using Google Cloud!
+      <br>
+      Instructions: Select your learning language, select your native language, and add vocabulary/phrases in your native language.
+    </div>
+    <br>
+    <div class="dropdown" style="float: right">
+      <button id="native" class="dropbtn">Native</button>
+      <div class="dropdown-content">
+        <button onclick="setNL('ar','Arabic')"> Arabic</button>
+        <br>
+        <i class='em em-flag-bd'></i>
+        <button onclick="setNL('bn', 'Bengali')"> Bengali</button>
+        <br>
+
+        <i class='em em-flag-bg'></i>
+        <button onclick="setNL('bg', 'Bulgarian')"> Bulgarian</button>
+        <br>
+
+        <i class='em em-cn'></i>
+        <button onclick="setNL('zh', 'Chinese(s)')"> Chinese(s)</button>
+        <br>
+
+        <i class='em em-flag-tw'></i>
+        <button onclick="setNL('zh-TW', 'Chinese(t)')"> Chinese(t)</button>
+        <br>
+
+        <i class='em em-flag-dk'></i>
+        <button onclick="setNL('da', 'Danish')"> Danish</button>
+        <br>
+
+        <i class='em em-us'></i>
+        <button onclick="setNL('en', 'English')"> English</button>
+        <br>
+
+        <i class='em em-flag-mf'></i>
+        <button onclick="setNL('fr', 'French')"> French</button>
+        <br>
+
+        <i class='em em-de'></i>
+        <button onclick="setNL('de', 'German')"> German</button>
+        <br>
+
+        <i class='em em-flag-gr'></i>
+        <button onclick="setNL('el', 'Greek')"> Greek</button>
+        <br>
+        <i class='em em-flag-il'></i>
+        <button onclick="setNL('he', 'Hebrew')"> Hebrew</button>
+        <br>
+
+        <i class='em em-flag-in'></i>
+        <button onclick="setNL('hi', 'Hindi')"> Hindi</button>
+        <br>
+
+        <i class='em em-flag-id'></i>
+        <button onclick="setNL('id', 'Indonesian')"> Indonesian</button>
+        <br>
+
+        <i class='em em-it'></i>
+        <button onclick="setNL('it', 'Italian')"> Italian</button>
+        <br>
+
+        <i class='em em-jp'></i>
+        <button onclick="setNL('ja', 'Japanese')"> Japanese</button>
+        <br>
+        <i class='em em-flag-id'></i>
+        <button onclick="setNL('jv', 'Javanese')"> Javanese</button>
+        <br>
+
+        <i class='em em-flag-kz'></i>
+        <button onclick="setNL('kk', 'Kazakh')"> Kazakh</button>
+        <br>
+
+        <i class='em em-kr'></i>
+        <button onclick="setNL('ko', 'Korean')"> Korean</button>
+        <br>
+
+        <button onclick="setNL('la', 'Latin')"> Latin</button>
+        <br>
+
+        <button onclick="setNL('ml', 'Mayalam')"> Malayalam</button>
+        <Br>
+
+        <i class='em em-flag-mn'></i>
+        <button onclick="setNL('mn', 'Mongolian')"> Mongolian</button>
+        <br>
+
+        <i class='em em-flag-ir'></i>
+        <button onclick="setNL('fa', 'Persian')"> Persian</button>
+        <br>
+
+        <i class='em em-flag-pl'></i>
+        <button onclick="setNL('pl', 'Polish')"> Polish</button>
+        <br>
+
+
+        <button onclick="setNL('pt', 'Portugese')"> Portuguese</button>
+        <br>
+
+        <button onclick="setNL('pa', 'Punjabi')"> Punjabi</button>
+        <br>
+
+        <i class='em em-ru'></i>
+        <button onclick="setNL('ru', 'Russian')"> Russian</button>
+        <br>
+
+        <i class='em em-flag-rs'></i>
+        <button onclick="setNL('sr', 'Serbian')"> Serbian</button>
+        <br>
+
+        <i class='em em-es'></i>
+        <button onclick="setNL('es', 'Spanish')"> Spanish</button>
+        <br>
+
+        <button onclick="setNL('sw', 'Swahili')"> Swahili</button>
+        <br>
+
+        <i class='em em-flag-se'></i>
+        <button onclick="setNL('sv', 'Swedish')"> Swedish</button>
+        <br>
+
+        <button onclick="setNL('ta', 'Tamil')"> Tamil</button>
+        <br>
+        <button onclick="setNL('te', 'Telugu')"> Telugu</button>
+        <br>
+
+        <i class='em em-flag-th'></i>
+        <button onclick="setNL('th', 'Thai')"> Thai</button>
+        <br>
+
+        <i class='em em-flag-tr'></i>
+        <button onclick="setNL('tr', 'Turkish')"> Turkish</button>
+        <br>
+        <i class='em em-flag-ua'></i>
+        <button onclick="setNL('uk', 'Ukrainian')"> Ukrainian</button>
+        <br>
+        <button onclick="setNL('ur', 'Urdu')"> Urdu</button>
+        <br>
+        <i class='em em-flag-vn'></i>
+        <button onclick="setNL('vi', 'Vietnamese')"> Vietnamese</button>
+
+      </div>
+
+    </div>
+
+    <div class="dropdown" style="float: inherit">
+      <button id="learn" class="dropbtn">Learn</button>
+      <div class="dropdown-content">
+
+        <button onclick="setLL('ar','Arabic')"> Arabic</button>
+        <br>
+        <i class='em em-flag-bd'></i>
+        <button onclick="setLL('bn', 'Bengali')"> Bengali</button>
+        <br>
+
+        <i class='em em-flag-bg'></i>
+        <button onclick="setLL('bg', 'Bulgarian')"> Bulgarian</button>
+        <br>
+
+        <i class='em em-cn'></i>
+        <button onclick="setLL('zh', 'Chinese(s)')"> Chinese(s)</button>
+        <br>
+
+        <i class='em em-flag-tw'></i>
+        <button onclick="setLL('zh-TW', 'Chinese(t)')"> Chinese(t)</button>
+        <br>
+
+        <i class='em em-flag-dk'></i>
+        <button onclick="setLL('da', 'Danish')"> Danish</button>
+        <br>
+
+        <i class='em em-us'></i>
+        <button onclick="setLL('en', 'English')"> English</button>
+        <br>
+
+        <i class='em em-flag-mf'></i>
+        <button onclick="setLL('fr', 'French')"> French</button>
+        <br>
+
+        <i class='em em-de'></i>
+        <button onclick="setLL('de', 'German')"> German</button>
+        <br>
+
+        <i class='em em-flag-gr'></i>
+        <button onclick="setLL('el', 'Greek')"> Greek</button>
+        <br>
+        <i class='em em-flag-il'></i>
+        <button onclick="setLL('he', 'Hebrew')"> Hebrew</button>
+        <br>
+
+        <i class='em em-flag-in'></i>
+        <button onclick="setLL('hi', 'Hindi')"> Hindi</button>
+        <br>
+
+        <i class='em em-flag-id'></i>
+        <button onclick="setLL('id', 'Indonesian')"> Indonesian</button>
+        <br>
+
+        <i class='em em-it'></i>
+        <button onclick="setLL('it', 'Italian')"> Italian</button>
+        <br>
+
+        <i class='em em-jp'></i>
+        <button onclick="setLL('ja', 'Japanese')"> Japanese</button>
+        <br>
+        <i class='em em-flag-id'></i>
+        <button onclick="setLL('jv', 'Javanese')"> Javanese</button>
+        <br>
+
+        <i class='em em-flag-kz'></i>
+        <button onclick="setLL('kk', 'Kazakh')"> Kazakh</button>
+        <br>
+
+        <i class='em em-kr'></i>
+        <button onclick="setLL('ko', 'Korean')"> Korean</button>
+        <br>
+
+        <button onclick="setLL('la', 'Latin')"> Latin</button>
+        <br>
+
+        <button onclick="setLL('ml', 'Mayalam')"> Malayalam</button>
+        <Br>
+
+        <i class='em em-flag-mn'></i>
+        <button onclick="setLL('mn', 'Mongolian')"> Mongolian</button>
+        <br>
+
+        <i class='em em-flag-ir'></i>
+        <button onclick="setLL('fa', 'Persian')"> Persian</button>
+        <br>
+
+        <i class='em em-flag-pl'></i>
+        <button onclick="setLL('pl', 'Polish')"> Polish</button>
+        <br>
+
+
+        <button onclick="setLL('pt', 'Portugese')"> Portuguese</button>
+        <br>
+
+        <button onclick="setLL('pa', 'Punjabi')"> Punjabi</button>
+        <br>
+
+        <i class='em em-ru'></i>
+        <button onclick="setLL('ru', 'Russian')"> Russian</button>
+        <br>
+
+        <i class='em em-flag-rs'></i>
+        <button onclick="setLL('sr', 'Serbian')"> Serbian</button>
+        <br>
+
+        <i class='em em-es'></i>
+        <button onclick="setLL('es', 'Spanish')"> Spanish</button>
+        <br>
+
+        <button onclick="setLL('sw', 'Swahili')"> Swahili</button>
+        <br>
+
+        <i class='em em-flag-se'></i>
+        <button onclick="setLL('sv', 'Swedish')"> Swedish</button>
+        <br>
+
+        <button onclick="setLL('ta', 'Tamil')"> Tamil</button>
+        <br>
+        <button onclick="setLL('te', 'Telugu')"> Telugu</button>
+        <br>
+
+        <i class='em em-flag-th'></i>
+        <button onclick="setLL('th', 'Thai')"> Thai</button>
+        <br>
+
+        <i class='em em-flag-tr'></i>
+        <button onclick="setLL('tr', 'Turkish')"> Turkish</button>
+        <br>
+        <i class='em em-flag-ua'></i>
+        <button onclick="setLL('uk', 'Ukrainian')"> Ukrainian</button>
+        <br>
+        <button onclick="setLL('ur', 'Urdu')"> Urdu</button>
+        <br>
+        <i class='em em-flag-vn'></i>
+        <button onclick="setLL('vi', 'Vietnamese')"> Vietnamese</button>
+      </div>
+    </div>
+    <br>
+    <h1>Vocabulary List</h1>
+    <input type="text" id="myInput" placeholder="Word">
+    <button id="add-btn">Add</button>
+    <button id="begin-btn">Let's start!</button>
+    <div id="display"></div>
+  </div>
+
+
+
+  <div id="container" class="hide">
+    <div id="score" class = "hide"></div>
+    <br>
+    <div id="question-container" class="hide">
+      <div id="question">Question</div>
+      <div id="answer-buttons" class="btn-grid">
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
+      </div>
+    </div>
+    <div class="controls">
+      <button id="next-btn" class="next-btn btn hide">Next</button>
+    </div>
+  </div>
+</body>
+
+</html>
