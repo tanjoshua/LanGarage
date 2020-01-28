@@ -10,4 +10,4 @@ xhr.setRequestHeader("Authorization", 'Bearer <INSERT AUTHORIZATION TOKEN HERE>'
 3. Open index.html to view a fully-functional LanGarage
 
 # Check it out
-Check out the home page of LanGarage at https://tanjoshua.github.io/LanGarage/. However, the quiz does not work due to the lack of an authorization token. The authorization tokens we generated expired after awhile :( However, you can still try it out if you generate your own token for the XML API! Learn how to do that here: https://cloud.google.com/storage/docs/authentication.
+Check out the home page of LanGarage at https://tanjoshua.github.io/LanGarage/. However, the quiz does not work due to the lack of an authorization token. The authorization tokens we generated expired after awhile :( However, you can still try LanGarage if you generate your own token for the XML API! Learn how to do that here: https://cloud.google.com/storage/docs/authentication.
